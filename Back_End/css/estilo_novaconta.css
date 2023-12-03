@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('imagens/background.jpg') no-repeat center center/cover;
+}
+
+.container {
+    width: 80%;
+    height: 95vh;
+    display: flex;
+    box-shadow: 0px 10px 40px #00000056;
+    background-color: #f1f1f1;
+}
+
+.form-image{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+
+}
+
+.form-image img {
+    width: 20rem;
+}
+
+
+
+.form {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.form-header{
+    display: flex;
+    justify-content: center;
+}
+
+.img-mob img{
+   width: 4rem;
+   display: none;
+}
+
+.login-btn{
+    display: flex;
+    align-items: center;
+}
+
+.login-btn button{
+    border:none;
+    background-color: #d00000;
+
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;  
+    letter-spacing: 3px;
+    font-weight: 800;
+    box-shadow: 0px 10px 40px -12px red;
+}
+
+.login-btn button:hover{
+    background-color: #9d0208;
+}
+
+.login-btn button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 0.3rem;
+    background-color: #d00000;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.1rem;
+    padding: 0.05rem;
+}
+
+.input-box input{
+    margin: 0.3rem;
+    padding: 0.3rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #000000;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #9d0208;
+
+}
+
+.input-box label,
+.gender-title h6{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder{
+    color: #000000be;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input{
+    margin-right: 0.35rem;
+}
+
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-btn{
+    width: 40%;
+    margin-top: 2rem;
+    border: none;
+    background-color: #d00000;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    box-shadow: 0px 10px 40px -12px red;
+}
+
+.continue-btn:hover {
+    background-color: #9d0208;
+}
+
+.continue-btn a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+
+
+}
+
+@media screen and (max-width: 1330px){
+    .img-mob img {
+        display: block;
+        width: 7rem;
+    }
+    .form-image{
+        display: none;
+    }
+    .container {
+        width: 98%;
+    }
+    .form {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .img-mob img {
+        width: 5rem;
+    }
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 11.5rem;
+        padding-right: 0.5rem;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+    .form-header {
+        max-height: 1.5rem;
+        font-size: 0.9rem;
+    }
+    .login-btn {
+        max-width: 1.5rem;
+        max-height: 0.75rem;
+    }
+    .continue-btn{
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+.span-required{
+    display: none;
+    color: #ca0800;
+    margin: 3px 0 0 1px;
+    font-size: 0.75rem;
+}
+
